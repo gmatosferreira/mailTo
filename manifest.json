@@ -1,0 +1,20 @@
+{
+    "manifest_version": 2,
+    "name": "mailto: Sapo Mail",
+    "version": "0.1",
+    "description": "Torna o Sapo Mail na aplicação por defeito para enviar emails.",
+    "icons": {
+        "48": "icons/icon.png"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*/*"
+            ],
+            "js": [
+                "resources/jquery-3.4.1.min.js", 
+                "borderify.js"
+            ]
+        }
+    ]
+}
