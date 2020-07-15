@@ -1,11 +1,12 @@
 {
     "manifest_version": 2,
     "name": "mailto: Sapo Mail",
-    "version": "0.1",
+    "version": "1.0",
     "homepage_url": "https://github.com/gmatosferreira/mailtoSapoMail",
     "description": "Torna o Sapo Mail na aplicação por defeito para enviar emails.",
     "icons": {
-        "48": "icons/icon.png"
+        "48": "icons/mtsp-48.png",
+        "32": "icons/mtsp-32.png"
     },
     "content_scripts": [
         {
@@ -17,5 +18,8 @@
                 "mailto.js"
             ]
         }
+    ],
+    "web_accessible_resources": [
+        "images/*"
     ]
 }
