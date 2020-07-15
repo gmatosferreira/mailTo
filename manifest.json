@@ -20,6 +20,8 @@
         }
     ],
     "web_accessible_resources": [
-        "images/*"
+        "icons/*",
+        "images/*",
+        "pages/*"
     ]
 }

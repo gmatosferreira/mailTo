@@ -48,16 +48,21 @@ function trigger(){
 $("body").append(`
     <div id="emailShareBackground" style="position:fixed; top:0; left:0; width:100%; height:100%; background-color: #000; opacity: .5; z-index: 9999999; overflow-y: none; display: none;"></div>
     <div id="emailShare" style="position:fixed; left: 35%; right: 35%; top: 30%; background-color: #fff; opacity: 1; border-radius: .3rem; color: #808080; z-index: 99999999; padding: 3rem; display:none; ">
-        <span id="emailShareClose" style="cursor: pointer; position: absolute; right: 3rem; top: 3rem;" title="Fechar">X</span>
+        <p style="position: absolute; right: 3rem; top: 3rem;"><span id="emailShareClose" style="cursor: pointer;" title="Fechar">X</span></p>
         <h3 style="margin-bottom:0;">Enviar email</h3>
         <p style="font-size: small;">para <span id="emailShareEmail"></span></p>
-        <hr>
-        <p style="font-size: small;">Escolha o serviço que pretende utilizar...</span>
+        <hr style="margin-top:1rem; margin-bottom:1rem;">
+        <p style="font-size: small;">Escolha o serviço que pretende utilizar...</p>
         <br>
-        <a id="emailShareSapo" href="#" target="popup"><img style="max-height:6rem;" src="`+browser.runtime.getURL("images/sapomail.png")+`"></a>
-        <a id="emailShareGmail" href="#" target="popup"><img style="max-height:6rem;" src="`+browser.runtime.getURL("images/gmail.png")+`"></a>
-        <a id="emailShareOutlook" href="#" target="popup"><img style="max-height:6rem;" src="`+browser.runtime.getURL("images/outlook.png")+`"></a>
-        <a id="emailShareDefault" href="#" target="popup"><img style="max-height:6rem;" src="`+browser.runtime.getURL("images/outro.png")+`"></a>
+        <div style="display:flex;">
+            <a id="emailShareSapo" href="#" target="popup"><img style="max-height:6rem;" src="`+browser.runtime.getURL("images/sapomail.png")+`"></a>
+            <a id="emailShareGmail" href="#" target="popup"><img style="max-height:6rem;" src="`+browser.runtime.getURL("images/gmail.png")+`"></a>
+            <a id="emailShareOutlook" href="#" target="popup"><img style="max-height:6rem;" src="`+browser.runtime.getURL("images/outlook.png")+`"></a>
+            <a id="emailShareDefault" href="#" target="popup"><img style="max-height:6rem;" src="`+browser.runtime.getURL("images/outro.png")+`"></a>
+        
+        </div>
+        <br>
+        <a style="color:inherit;" target="_blank" href="`+browser.runtime.getURL("pages/about.html")+`"><p style="font-size: small;margin-bottom:0; text-align:right;">Sobre</p></a>
     </div>
 `);
 
