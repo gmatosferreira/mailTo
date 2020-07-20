@@ -11,10 +11,20 @@
     "permissions": [
         "storage"
     ],
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*/*"
+            ],
+            "js": [
+                "resources/jquery-3.4.1.min.js", 
+                "scripts/mailto.js"
+            ]
+        }
+    ],
     "background": {
         "scripts": [
-            "resources/jquery-3.4.1.min.js",
-            "mailto.js"
+            "scripts/updates.js"
         ]
     },
     "web_accessible_resources": [
