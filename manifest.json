@@ -1,24 +1,22 @@
 {
     "manifest_version": 2,
-    "name": "mailto: Sapo Mail",
-    "version": "1.0",
-    "homepage_url": "https://github.com/gmatosferreira/mailtoSapoMail",
-    "description": "Torna o Sapo Mail na aplicação por defeito para enviar emails.",
+    "name": "mailto: Sapo Mail, Gmail e Outlook",
+    "version": "2.0",
+    "homepage_url": "https://github.com/gmatosferreira/mailTo",
+    "description": "Envie emails no seu serviço habitual de forma simples sem sair do navegador!",
     "icons": {
         "48": "icons/mtsp-48.png",
         "32": "icons/mtsp-32.png"
     },
-    "content_scripts": [
-        {
-            "matches": [
-                "*://*/*"
-            ],
-            "js": [
-                "resources/jquery-3.4.1.min.js", 
-                "mailto.js"
-            ]
-        }
+    "permissions": [
+        "storage"
     ],
+    "background": {
+        "scripts": [
+            "resources/jquery-3.4.1.min.js",
+            "mailto.js"
+        ]
+    },
     "web_accessible_resources": [
         "icons/*",
         "images/*",
